@@ -11,6 +11,6 @@ console.log(element);
 
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
-      <App />
+      <App addionalData="test data" />
     </BrowserRouter>
 )
