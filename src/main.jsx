@@ -5,12 +5,15 @@ import App from './App.jsx'
 import Counter from './Counter.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
+import MyComponent from './MyComponent.jsx';
+import ScreenComponent from './ScreenComponent.jsx';
 
 let element = <h1>MY Component</h1>;
 console.log(element);
 
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
-      <App addionalData="test data" />
+      {/* <App addionalData="test data" /> */}
+      <ScreenComponent />
     </BrowserRouter>
 )
