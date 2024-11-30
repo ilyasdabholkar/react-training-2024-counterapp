@@ -1,22 +1,36 @@
-import React, { createRef } from 'react'
+import React,{useState} from 'react'
 
 function Form() {
 
-    const username = createRef();
+    const [formValues,setFormValues] = useState({
+        username : 'Test something'
+    })
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        let nameValue = username.current.value;
-        alert(nameValue);
+        console.log(formValues);
     }
+
+    const handleChange = (e) => {
+        setFormValues({
+            username : e.target.value
+        })
+    }
+
 
   return (
     <div>
         <form className='w-50' onSubmit={handleSubmit}>
             <div className="mb-3 text-center">
                 <label for="nameInput" className="form-label">Enter Name</label>
-                <input ref={username}  type="text" className="form-control" id="nameInput" placeholder='Enter Something' />
+                <input 
+                    value={formValues.username}
+                    type="text" 
+                    className="form-control" 
+                    id="nameInput" 
+                    placeholder='Enter Something' 
+                    onChange={handleChange}
+                />
                 <button type="submit" className='btn btn-primary'>Submit</button>
             </div>
         </form>
