@@ -15,7 +15,7 @@ function Navbar({totalCounters}) {
                 <Link to="/products">Products</Link>
             </li>
             <li className='mx-4'>
-                <a href="/admin">Admin</a>
+                <Link to="/admin">Admin</Link>
             </li>
         </ul>
         <span className="badge badge-pill bg-secondary m-2">

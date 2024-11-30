@@ -10,9 +10,7 @@ let element = <h1>MY Component</h1>;
 console.log(element);
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>,
 )

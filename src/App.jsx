@@ -81,7 +81,10 @@ function App() {
           element={
             <Products />
           }
-        />
+        >
+          <Route path=":year" element={<Products/>} />
+          <Route path=":year/:month" element={<Products/>} />
+        </Route>
          <Route
           path="/admin"
           element={
