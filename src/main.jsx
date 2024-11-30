@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import MyComponent from './MyComponent.jsx';
 import ScreenComponent from './ScreenComponent.jsx';
+import Form from './Form.jsx';
 
 let element = <h1>MY Component</h1>;
 console.log(element);
@@ -14,6 +15,6 @@ console.log(element);
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       {/* <App addionalData="test data" /> */}
-      <ScreenComponent />
+      <Form />
     </BrowserRouter>
 )
