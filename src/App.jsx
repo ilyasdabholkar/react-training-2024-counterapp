@@ -5,11 +5,13 @@ import "./App.css";
 
 import Movies from "./Movies";
 import Counters from "./Counters";
-import Navbar from "./Navbar";
 import { Routes, Route } from "react-router-dom";
 import Products from "./pages/Products";
 import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
+import Accounts from "./pages/Accounts";
+import Navbar from "./components/Navbar";
+import AccountForm from "./pages/AccountForm";
 
 // function App() {
 //   const [counters, setCounters] = useState([
@@ -102,33 +104,18 @@ import NotFound from "./pages/NotFound";
 //   );
 // }
 
-export default class App extends Component {
-  state={}
-
-  constructor(props){
-    super(props);
-    console.log('App - Constructor');
-    this.state.props = {props}
-  }
-
-  componentDidMount(){
-    this.setState({});
-    console.log('App - Mounted');
-  }
-  
-  componentDidUpdate(){
-    console.log('App - Updated');
-  }
-
-  componentWillUnmount(prevProps,newProps){
-    console.log('App - will be removed');
-  }
-
-  render(){
-    console.log('App - Render');
-    return(
-      <h1>This is Class based Component</h1>
-    )
-  }
+function App(){
+  return(
+  <div className="container">
+    <Navbar />
+    <div className="d-flex justify-content-center">
+      <Routes>
+        <Route path="/" element={<Accounts />} />
+        <Route path="/account/:id" element={<AccountForm />} />
+      </Routes>
+    </div>
+  </div>
+  )
 }
 
+export default App;
